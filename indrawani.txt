@@ -1,0 +1,19 @@
+PSEUDOCODE ONLINE FOOD ORDER
+
+BEGIN
+DISPLAY list_restourant
+ACTIVATED location
+READ Selected_resturant
+DISPLAY food_menu
+READ Selected_food
+READ sum_food
+STORE price_food = food * sum_price
+READ Selected_checkout
+READ Selected_address
+READ Selected_paymentMethod
+STORE "membayar menggunakan e-wallet" 
+   IF "ya" READ_pin to pay
+      print "order in process"
+   ELSE "no" READ_order_food
+      ptint "order in process"
+END
