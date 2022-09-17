@@ -1,0 +1,7 @@
+BEGIN
+DISPLAY list_restaurant
+ACTIVATED LOCATION
+READ selected_reaturant
+dst ..
+
+STORE total_harga = slected_food * quantity
