@@ -1,3 +1,12 @@
 BEGIN
 DISPLAY list-restaurant
 ACTIVATE your_location
+READ select_restaurant
+DISPLAY food_menu
+READ select_food
+READ sum_food
+STORE food*sum_price
+STORE food_price
+READ select_cehckout
+READ select_address
+READ select_payment_method
