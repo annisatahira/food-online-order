@@ -1,0 +1,36 @@
+PROGRAM OnlineFood
+
+READ AND WRITE "restaurant" with string
+
+READ AND WRITE "location" with boolean
+STORE "location" with true
+
+STORE "restaurant" with "nameRestaurant"
+
+READ AND WRITE "food" with string
+STORE "food" with "nameFood"
+
+READ AND WRITE "qtyFood" with number
+STORE "qtyFood" with 3
+
+READ AND WRITE "totalPrice" with number
+STORE "totalPrice" with CALCULATE "food" mutiply by "qtyFood" 
+PRINT "totalPrice"
+
+READ AND WRITE "checkout" with boolean
+STORE "checkout" with true
+
+READ AND WRITE "address" with string
+STORE "address" with "nameAddress"
+
+READ AND WRITE "payment" with boolean
+STORE "payment" with true
+
+IF true
+    READ AND WRITE "pin" with number
+    STORE "pin" with 123
+Else
+    READ AND WRITE "order" with boolean
+    STORE "order" with true
+
+PRINT "processed"
