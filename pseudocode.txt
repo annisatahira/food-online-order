@@ -1,0 +1,17 @@
+BEGIN
+DISPLAY list-restaurant
+ACTIVATE your_location
+READ select_restaurant
+DISPLAY food_menu
+READ select_food
+READ sum_food
+STORE food_price = food*sum_price
+READ select_cehckout
+READ select_address
+READ select_payment_method
+IF "payment with e-wallet"
+    READ payment_pin
+ELSE
+    READ order_food
+order_processed
+END
