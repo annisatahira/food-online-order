@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value="1"/>
+        <attribute name="authors" value="PC23"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-19 02:38:04 "/>
+        <attribute name="created" value="UEMyMztQQzIzLVBDOzIwMjAtMTItMTA7IjExOjMwOjM3ICI7MTg2Ng=="/>
+        <attribute name="edited" value="UEMyMztQQzIzLVBDOzIwMjAtMTItMTA7IjEyOjAyOjQwICI7MTsxOTY4"/>
+        <attribute name="edited" value="J0VEWSc7RURJOzIwMjItMDktMTk7IjAyOjM4OjA0ICI7NDE7MTg3MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="namabarang" type="String" array="False" size=""/>
+            <declare name="harga, jumlah, Bilangan" type="Integer" array="False" size=""/>
+            <declare name="total, pembayaran, totalakhir, kembalian" type="Integer" array="False" size=""/>
+            <output expression="&quot;Nama Barang&quot;" newline="True"/>
+            <input variable="namabarang"/>
+            <output expression="&quot;Harga Satuan&quot;" newline="True"/>
+            <input variable="harga"/>
+            <output expression="&quot;Jumlah&quot;" newline="True"/>
+            <input variable="jumlah"/>
+            <assign variable="total" expression="harga * jumlah"/>
+            <for variable="Bilangan" start="1" end="1&#13;&#10;" direction="inc" step="1">
+                <output expression="&quot;Total = Rp, &quot;&amp;total" newline="True"/>
+                <if expression="total &gt;= 100000">
+                    <then>
+                        <output expression="&quot; Diskon&#13;&#10; Rp,10000&quot;" newline="True"/>
+                        <assign variable="totalakhir" expression="total-10000"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Diskon &#13;&#10;  Rp, 0&quot;" newline="True"/>
+                        <assign variable="totalakhir" expression="total-0"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Total Akhir = Rp, &quot; &amp;totalakhir" newline="True"/>
+            <input variable="pembayaran"/>
+            <assign variable="kembalian" expression="pembayaran-totalakhir"/>
+            <output expression="&quot;Kembalian = Rp, &quot; &amp;kembalian" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
