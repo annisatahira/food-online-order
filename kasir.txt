@@ -1,0 +1,23 @@
+PSEUDOCODE KASIR
+
+echo "Nama Barang" >$(tty)
+read namabarang
+echo "Harga Satuan" >$(tty)
+read harga
+echo "Jumlah" >$(tty)
+read jumlah
+total=$[ $harga * $jumlah ]
+for bilangan in $(seq 1 1); do
+    echo "Total = Rp, $total" >$(tty)
+    if [[ $total -ge 100000 ]]; then
+        echo " Diskon   Rp,10000" >$(tty)
+        totalakhir=$[ $total - 10000 ]
+    else
+        echo "Diskon     Rp, 0" >$(tty)
+        totalakhir=$[ $total - 0 ]
+    fi
+done
+echo "Total Akhir = Rp, $totalakhir" >$(tty)
+read pembayaran
+kembalian=$[ $pembayaran - $totalakhir ]
+echo "Kembalian = Rp, $kembalian" >$(tty)
